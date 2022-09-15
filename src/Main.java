@@ -1,7 +1,3 @@
-// Crie um sistema para petshop de acordo com os  requisitos: Poder ter acesso às informações sobre todos o animais que são tratados na clínica, Poder ter acesso às informações sobre todos o proprietários que visitam a clínica, Manter os dados dos profissionais médicos veterinários que atendem na clinica e realizam as consultas, Saber quais animais estão sendo consultados e quais são as medicações que cada um recebe e valor total a ser cobrado do proprietário considerando os medicamentos, exames e o valor da consulta, Controlar se os animais estão corretamente vacinados e controlar a data de segunda dose. Controlar tosa/banho Controlar os banhos e tosas que cada animal teve e se há algum banho/tosa marcado, Manter Vacinas Poder ter acesso as informações e dados das vacinas fornecidas pela clinica, Manter medicamentos Poder ter acesso as informações e dados dos medicamentos utilizados durante as consultas, Manter exames Poder ter acesso as informações e dados dos exames prestados pela clinica durante as consultas.
-
-import Animal.Animal;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Bem vindo ao PetShop!");
