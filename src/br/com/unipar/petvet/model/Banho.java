@@ -5,10 +5,11 @@ public class Banho extends BanhoTosa {
     private String data;
     private String hora;
 
-    public Banho(int id, String data, String hora) {
-        this.id = id;
-        this.data = data;
-        this.hora = hora;
+    public Banho(int id, String data, String hora, int id1, String data1, String hora1) {
+        super(id, data, hora);
+        this.id = id1;
+        this.data = data1;
+        this.hora = hora1;
     }
 
     public int getId() {
