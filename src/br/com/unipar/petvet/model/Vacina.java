@@ -5,10 +5,16 @@ public class Vacina {
     private String name;
     private String medicationSchedule;
 
-    public Vacina(int id, String name, String medicationSchedule) {
+    private String data;
+
+    private String hora;
+
+    public Vacina(int id, String name, String medicationSchedule, String data, String hora) {
         this.id = id;
         this.name = name;
         this.medicationSchedule = medicationSchedule;
+        this.data = data;
+        this.hora = hora;
     }
 
     public int getId() {
@@ -35,12 +41,24 @@ public class Vacina {
         this.medicationSchedule = medicationSchedule;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
     @Override
     public String toString() {
-        return "br.com.unipar.petvet.model.Vacina{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", medicationSchedule='" + medicationSchedule + '\'' +
-                '}';
+        return "Vacina{" + "id=" + id + ", name='" + name + '\'' + ", medicationSchedule='" + medicationSchedule + '\'' + ", data='" + data + '\'' + ", hora='" + hora + '\'' + '}';
     }
 }

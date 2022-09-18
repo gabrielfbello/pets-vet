@@ -7,8 +7,6 @@ public class Animal {
 
     private RacaEnum raca;
 
-    private String tipoAnimal;
-
     private String especie;
 
     private String sexo;
@@ -18,10 +16,9 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(String nome, RacaEnum raca, String tipoAnimal, String especie, String sexo, int idade) {
+    public Animal(String nome, RacaEnum raca, String especie, String sexo, int idade) {
         this.nome = nome;
         this.raca = raca;
-        this.tipoAnimal = tipoAnimal;
         this.especie = especie;
         this.sexo = sexo;
         this.idade = idade;
@@ -41,14 +38,6 @@ public class Animal {
 
     public void setRaca(RacaEnum raca) {
         this.raca = raca;
-    }
-
-    public String getTipoAnimal() {
-        return tipoAnimal;
-    }
-
-    public void setTipoAnimal(String tipoAnimal) {
-        this.tipoAnimal = tipoAnimal;
     }
 
     public String getEspecie() {
@@ -77,13 +66,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "nome='" + nome + '\'' +
-                ", raca=" + raca +
-                ", tipoAnimal='" + tipoAnimal + '\'' +
-                ", especie='" + especie + '\'' +
-                ", sexo='" + sexo + '\'' +
-                ", idade=" + idade +
-                '}';
+        return "Animal{" + "nome='" + nome + '\'' + ", raca=" + raca + ", especie='" + especie + '\'' + ", sexo='" + sexo + '\'' + ", idade=" + idade + '}';
     }
 }

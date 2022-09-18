@@ -1,9 +1,5 @@
 package br.com.unipar.petvet.consts;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public enum RacaEnum {
     LABRADORRETRIEVER("Labrador Retriever"),
     POODLE("Poodle"),
@@ -12,27 +8,14 @@ public enum RacaEnum {
     BEAGLE("Beagle"),
     SHIBAINU("Shiba Inu");
 
-    private static final List<String> nomeRacaLista;
+    public String racaNome;
 
-    private final String nomeRaca;
-
-    static {
-        nomeRacaLista = new ArrayList<>();
-        for (RacaEnum racaEnum : RacaEnum.values()) {
-            nomeRacaLista.add(racaEnum.nomeRaca);
-        }
+    RacaEnum (String racaNome) {
+        this.racaNome = racaNome;
     }
 
-    RacaEnum (String nomeRaca) {
-        this.nomeRaca = nomeRaca;
-    }
-
-    public String getNomeRaca() {
-        return nomeRaca;
-    }
-
-    public static List<String> getNomeRacaLista() {
-        return Collections.unmodifiableList(nomeRacaLista);
+    public String getRacaNome() {
+        return racaNome;
     }
 }
 
