@@ -3,13 +3,16 @@ package br.com.unipar.petvet.model;
 import br.com.unipar.petvet.consts.RacaEnum;
 
 public class Animal {
-private String nome;
+    private String nome;
+
     private RacaEnum raca;
 
     private String tipoAnimal;
 
     private String especie;
+
     private String sexo;
+
     private int idade;
 
 
