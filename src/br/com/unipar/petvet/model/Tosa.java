@@ -35,10 +35,9 @@ package br.com.unipar.petvet.model;public class Tosa {
 
     @Override
     public String toString() {
-        return "br.com.unipar.petvet.model.Tosa{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", medicationSchedule='" + medicationSchedule + '\'' +
-                '}';
+        return
+                "id: " + id + "\n" +
+                "name: " + name + "\n" +
+                "medicationSchedule: " + medicationSchedule + "\n";
     }
 }

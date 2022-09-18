@@ -37,6 +37,8 @@ public class Banho {
 
     @Override
     public String toString() {
-        return "Banho{" + "banhoId=" + banhoId + ", banhoData='" + banhoData + '\'' + ", banhoHora='" + banhoHora + '\'' + '}';
+    return "banhoId: " + banhoId + "\n" +
+                "banhoData: " + banhoData + "\n" +
+                "banhoHora: " + banhoHora + "\n";
     }
 }

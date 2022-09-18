@@ -37,10 +37,8 @@ public class Medicamento {
 
     @Override
     public String toString() {
-        return "br.com.unipar.petvet.model.Medicamento{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", medicationSchedule='" + medicationSchedule + '\'' +
-                '}';
+        return "id: " + id + "\n" +
+                "name: " + name + "\n" +
+                "medicationSchedule: " + medicationSchedule + "\n";
     }
 }

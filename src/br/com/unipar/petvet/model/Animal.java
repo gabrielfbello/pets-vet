@@ -5,7 +5,7 @@ import br.com.unipar.petvet.consts.RacaEnum;
 public class Animal {
     private String nome;
 
-    private RacaEnum raca;
+    private String raca;
 
     private String especie;
 
@@ -16,7 +16,7 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(String nome, RacaEnum raca, String especie, String sexo, int idade) {
+    public Animal(int id, String nome, String raca, String especie, String sexo, int idade) {
         this.nome = nome;
         this.raca = raca;
         this.especie = especie;
@@ -32,11 +32,11 @@ public class Animal {
         this.nome = nome;
     }
 
-    public RacaEnum getRaca() {
-        return raca;
-    }
+//    public RacaEnum getRaca() {
+//        return raca;
+//    }
 
-    public void setRaca(RacaEnum raca) {
+    public void setRaca(String raca) {
         this.raca = raca;
     }
 
@@ -64,8 +64,13 @@ public class Animal {
         this.idade = idade;
     }
 
+
     @Override
     public String toString() {
-        return "Animal{" + "nome='" + nome + '\'' + ", raca=" + raca + ", especie='" + especie + '\'' + ", sexo='" + sexo + '\'' + ", idade=" + idade + '}';
+        return "nome: " + nome + "\n" +
+                "raca: " + raca + "\n" +
+                "especie: " + especie + "\n" +
+                "sexo: " + sexo + "\n" +
+                "idade: " + idade + "\n";
     }
 }
