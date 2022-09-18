@@ -1,38 +1,21 @@
+import br.com.unipar.petvet.model.*;
+
+import javax.swing.*;
+
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Bem vindo ao PetShop!");
-
-        // Criação de um objeto do tipo Animal
+        JFrame frame = new JFrame();
+        frame.setAlwaysOnTop(true);
         Animal animal = new Animal();
 
-        // Criação de um objeto do tipo Proprietario
-        Proprietario proprietario = new Proprietario();
+        animal.setNome(JOptionPane.showInputDialog("Insira um nome"));
+        animal.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Insira a Idade")));
 
-        // Criação de um objeto do tipo Veterinario
-        Veterinario veterinario = new Veterinario();
-
-        // Criação de um objeto do tipo Consulta
-        Consulta consulta = new Consulta();
-
-        // Criação de um objeto do tipo Vacina
-        Vacina vacina = new Vacina();
-
-        // Criação de um objeto do tipo Medicamento
-        Medicamento medicamento = new Medicamento();
-
-        // Criação de um objeto do tipo Exame
-        Exame exame = new Exame();
-
-        // Criação de um objeto do tipo Tosador
-        Tosador tosador = new Tosador();
-
-        // Criação de um objeto do tipo Banho
-        Banho banho = new Banho();
-
-        // Criação de um objeto do tipo Tosa
-        Tosa tosa = new Tosa();
-
-        // Criação de um objeto do tipo BanhoTosa
-        BanhoTosa banhoTosa = new BanhoTosa();
+        Object[] options = {"option1", "option2", "option3"};
+        //...and passing `frame` instead of `null` as first parameter
+        Object selectionObject = JOptionPane.showInputDialog(frame, "Choose", "Menu", JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+        String selectionString = selectionObject.toString();
     }
 }

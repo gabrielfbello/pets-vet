@@ -1,3 +1,5 @@
+package br.com.unipar.petvet.model;
+
 public class Consulta {
     private int id;
     private String data;

@@ -1,6 +1,8 @@
-public class Proprietario {
+package br.com.unipar.petvet.model;
+
+public class Veterinario {
     private String nome;
-    private String cpf;
+    private String crmv;
     private String telefone;
     private String endereco;
     private String email;
@@ -15,12 +17,12 @@ public class Proprietario {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCrmv() {
+        return crmv;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCrmv(String crmv) {
+        this.crmv = crmv;
     }
 
     public String getTelefone() {
