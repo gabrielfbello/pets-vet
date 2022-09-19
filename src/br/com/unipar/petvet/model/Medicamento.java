@@ -17,7 +17,7 @@ public class Medicamento {
         this.id = id;
     }
 
-    public String getName() {
+    public String getNome() {
         return name;
     }
 

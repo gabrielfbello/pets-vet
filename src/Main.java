@@ -65,7 +65,7 @@ public class Main {
         exames.add(new Exame(5, "Eletroencefalograma"));
 
 //        Amostragem de Consultas
-        consultas.add(new Consulta(1, "12/08/2021", "12:00", "Exame de Rotina", 65.00, 1 ,2, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta(1, "12/08/2021", "12:00", "Exame de Rotina", 65.00, 1, 2, List.of(1, 2), List.of(3)));
         consultas.add(new Consulta(2, "12/08/2021", "13:00", "Pulgas e Carrapatos", 80.00, 2, 1, List.of(1), List.of(1, 2)));
         consultas.add(new Consulta(3, "12/08/2021", "14:00", "Exame de Rotina", 65.00, 3, 1, List.of(1, 2), List.of(3)));
         consultas.add(new Consulta(4, "12/08/2021", "15:00", "Castração", 150.00, 4, 1, List.of(1, 2), List.of(3)));
@@ -74,7 +74,98 @@ public class Main {
         String[] actionOptions = {"Consultar", "Cadastrar"};
         int actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
 
-        String[] classOptions = {"Animais", "Vacinas", "Exames", "Medicamentos", "Tosadores", "Clientes"};
+        String[] classOptions = {"Animais", "Vacinas", "Exames", "Medicamentos", "Veterinários", "Proprietários", "Consultas"};
         int chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+
+//        Menu para consulta ou cadastro
+
+        if (actionOption == 0) {
+            switch (chosenClass) {
+                case 0:
+                    int idAnimal = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do animal: "));
+                    for (Animal animal : animais) {
+                        if (animal.getId() == idAnimal) {
+                            JOptionPane.showMessageDialog(null, "ID: " + animal.getId() +
+
+                                    "\nNome: " + animal.getNome() +
+
+                                    "\nRaça: " + animal.getRaca() +
+
+                                    "\nEspécie: " + animal.getEspecie() +
+
+                                    "\nSexo: " + animal.getSexo() +
+
+                                    "\nIdade: " + animal.getIdade() +
+
+                                    "\nProprietário: " + animal.getIdProprietario());
+                        }
+                    }
+                    break;
+                case 1:
+                    int idVacina = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID da vacina: "));
+                    for (Vacina vacina : vacinas) {
+                        if (vacina.getId() == idVacina) {
+                            JOptionPane.showMessageDialog(null, "ID: " + vacina.getId() +
+
+                                    "\nNome: " + vacina.getNome());
+                        }
+                    }
+                    break;
+                case 2:
+                    int idExame = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do exame: "));
+                    for (Exame exame : exames) {
+                        if (exame.getId() == idExame) {
+                            JOptionPane.showMessageDialog(null, "ID: " + exame.getId() +
+
+                                    "\nNome: " + exame.getNome());
+                        }
+                    }
+                    break;
+                case 3:
+                    int idMedicamento = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do medicamento: "));
+                    for (Medicamento medicamento : medicamentos) {
+                        if (medicamento.getId() == idMedicamento) {
+                            JOptionPane.showMessageDialog(null, "ID: " + medicamento.getId() +
+
+                                    "\nNome: " + medicamento.getNome());
+                        }
+                    }
+                    break;
+                case 4:
+                    int idVeterinario = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do veterinário: "));
+                    for (Veterinario veterinario : veterinarios) {
+                        if (veterinario.getId() == idVeterinario) {
+                            JOptionPane.showMessageDialog(null, "ID: " + veterinario.getId() +
+
+                                    "\nNome: " + veterinario.getNome() +
+
+                                    "\nEndereço: " + veterinario.getEndereco() +
+
+                                    "\nTelefone: " + veterinario.getTelefone() +
+
+                                    "\nCRMV: " + veterinario.getCrmv() +
+
+                                    "\nData de Cadastro: " + veterinario.getDataCadastro());
+                        }
+                    }
+                    break;
+                case 5:
+                    int idProprietario = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do proprietário: "));
+                    for (Proprietario proprietario : proprietarios) {
+                        if (proprietario.getId() == idProprietario) {
+                            JOptionPane.showMessageDialog(null, "ID: " + proprietario.getId() +
+
+                                    "\nNome: " + proprietario.getNome() +
+
+                                    "\nEndereço: " + proprietario.getEndereco() +
+
+                                    "\nTelefone: " + proprietario.getTelefone());
+                        }
+                    }
+                    break;
+            }
+        }
+
+
     }
 }

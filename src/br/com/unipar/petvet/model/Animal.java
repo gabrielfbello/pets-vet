@@ -39,6 +39,10 @@ public class Animal {
         this.raca = raca;
     }
 
+    public String getRaca() {
+        return raca;
+    }
+
     public String getEspecie() {
         return especie;
     }
