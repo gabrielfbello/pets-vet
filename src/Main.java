@@ -8,37 +8,36 @@ public class Main {
     public static void main(String[] args) {
         List<Animal> animais = new ArrayList<>();
         List<BanhoTosa> banhosTosa = new ArrayList<>();
-        List<String> medicamentos = new ArrayList<>();
-        List<Consulta> consultas = new ArrayList<>();
+        List<Medicamento> medicamentos = new ArrayList<>();
         List<Exame> exames = new ArrayList<>();
         List<Proprietario> proprietarios = new ArrayList<>();
         List<Tosa> tosas = new ArrayList<>();
         List<Veterinario> veterinarios = new ArrayList<>();
         List<Vacina> vacinas = new ArrayList<>();
+        List<Consulta> consultas = new ArrayList<>();
 
 //        Amostragem de Proprietários
-        proprietarios.add(new Proprietario(1, 1, "João", "123.456.789-00", "Rua 1", "1234-5678"));
-        proprietarios.add(new Proprietario(2, 2, "Maria", "987.654.321-00", "Rua das Flores", "8765-4321"));
-        proprietarios.add(new Proprietario(3, 3, "José", "123.456.789-00", "Avenida Brasil", "1234-5678"));
-        proprietarios.add(new Proprietario(4, 4, "Ana", "987.654.321-00", "Rua 2", "8765-4321"));
-        proprietarios.add(new Proprietario(5, 5, "Pedro", "123.456.789-00", "Rua Rio Grande do Sul", "1234-5678"));
-        proprietarios.add(new Proprietario(6, 6, "Paula", "987.654.321-00", "Rua 3", "8765-4321"));
-        proprietarios.add(new Proprietario(7, 7, "Carlos", "123.456.789-00", "Rua Nove de Julho", "1234-5678"));
-        proprietarios.add(new Proprietario(8, 8, "Julia", "987.654.321-00", "Rua São Paulo", "8765-4321"));
-        proprietarios.add(new Proprietario(9, 9, "Marcos", "123.456.789-00", "Rua Tocantins", "1234-5678"));
-        proprietarios.add(new Proprietario(10, 10, "Carla", "987.654.321-00", "Rua 4", "8765-4321"));
+        proprietarios.add(new Proprietario(1, "João", "123.456.789-00", "Rua 1", "123456789", List.of(2, 7)));
+        proprietarios.add(new Proprietario(2, "Maria", "987.654.321-00", "Rua 2", "987654321", List.of(1)));
+        proprietarios.add(new Proprietario(3, "José", "123.987.456-00", "Rua 3", "123987456", List.of(3)));
+        proprietarios.add(new Proprietario(4, "Ana", "456.789.123-00", "Rua 4", "456789123", List.of(4)));
+        proprietarios.add(new Proprietario(5, "Pedro", "789.123.456-00", "Rua 5", "789123456", List.of(5)));
+        proprietarios.add(new Proprietario(6, "Paulo", "321.654.987-00", "Rua 6", "321654987", List.of(6)));
+        proprietarios.add(new Proprietario(7, "Carla", "654.321.987-00", "Rua 7", "654321987", List.of(8)));
+        proprietarios.add(new Proprietario(8, "Marcos", "987.321.654-00", "Rua 8", "987321654", List.of(9)));
+        proprietarios.add(new Proprietario(9, "Julia", "654.987.321-00", "Rua 9", "654987321", List.of(10)));
 
 //      Amostragem de Animais
-        animais.add(new Animal(1, "Rex", "Pastor Alemão", "Cachorro", "Macho", 2));
-        animais.add(new Animal(2, "Luna", "Vira-lata", "Cachorro", "Fêmea", 1));
-        animais.add(new Animal(3, "Miau", "Vira-lata", "Gato", "Fêmea", 1));
-        animais.add(new Animal(4, "Bolinha", "Ragdoll", "Gato", "Macho", 2));
-        animais.add(new Animal(5, "Pé de Pano", "Vira-lata", "Cachorro", "Macho", 1));
-        animais.add(new Animal(6, "Malvo", "Bulldog", "Cachorro", "Macho", 1));
-        animais.add(new Animal(7, "Pogger", "Pincher", "Cachorro", "Macho", 1));
-        animais.add(new Animal(8, "Zeca", "Poodle", "Cachorro", "Macho", 1));
-        animais.add(new Animal(9, "Espeto", "Pitbull", "Cachorro", "Macho", 1));
-        animais.add(new Animal(10, "Bobby", "Pitbull", "Cachorro", "Macho", 1));
+        animais.add(new Animal(1, "Rex", "Pastor Alemão", "Cachorro", "Macho", 2, 1));
+        animais.add(new Animal(2, "Luna", "Vira-lata", "Cachorro", "Fêmea", 1, 2));
+        animais.add(new Animal(3, "Miau", "Vira-lata", "Gato", "Fêmea", 1, 3));
+        animais.add(new Animal(4, "Bolinha", "Ragdoll", "Gato", "Macho", 2, 4));
+        animais.add(new Animal(5, "Pé de Pano", "Vira-lata", "Cachorro", "Macho", 1, 5));
+        animais.add(new Animal(6, "Malvo", "Bulldog", "Cachorro", "Macho", 2, 6));
+        animais.add(new Animal(7, "Pogger", "Pincher", "Cachorro", "Macho", 1, 1));
+        animais.add(new Animal(8, "Zeca", "Poodle", "Cachorro", "Macho", 1, 7));
+        animais.add(new Animal(9, "Espeto", "Pitbull", "Cachorro", "Macho", 1, 8));
+        animais.add(new Animal(10, "Bobby", "Pitbull", "Cachorro", "Macho", 1, 9));
 
 //      Amostragem de Veterinários
         veterinarios.add(new Veterinario(1, "João", "123.456.789-00", "Rua 1", "1234-5678", "1234", "12/12/2012", "13/08/22"));
@@ -49,13 +48,14 @@ public class Main {
 //        Amostragem de Vacinas
         vacinas.add(new Vacina(1, "V8"));
         vacinas.add(new Vacina(2, "V10"));
+        vacinas.add(new Vacina(3, "V12"));
 
 //        Amostragem de Medicamentos
-        medicamentos.add(1, "Dorflex");
-        medicamentos.add(2, "Dipirona");
-        medicamentos.add(3, "Ibuprofeno");
-        medicamentos.add(4, "Paracetamol");
-        medicamentos.add(5, "Amoxicilina");
+        medicamentos.add(new Medicamento(1, "Dipirona"));
+        medicamentos.add(new Medicamento(2, "Dorflex"));
+        medicamentos.add(new Medicamento(3, "Buscopan"));
+        medicamentos.add(new Medicamento(4, "Rivotril"));
+        medicamentos.add(new Medicamento(5, "Neosaldina"));
 
 //        Amostragem de Exames
         exames.add(new Exame(1, "Raio-X"));
@@ -64,6 +64,12 @@ public class Main {
         exames.add(new Exame(4, "Eletrocardiograma"));
         exames.add(new Exame(5, "Eletroencefalograma"));
 
+//        Amostragem de Consultas
+        consultas.add(new Consulta(1, "12/08/2021", "12:00", "Exame de Rotina", 65.00, 1 ,2, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta(2, "12/08/2021", "13:00", "Pulgas e Carrapatos", 80.00, 2, 1, List.of(1), List.of(1, 2)));
+        consultas.add(new Consulta(3, "12/08/2021", "14:00", "Exame de Rotina", 65.00, 3, 1, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta(4, "12/08/2021", "15:00", "Castração", 150.00, 4, 1, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta(5, "12/08/2021", "16:00", "Raiva", 100.00, 5, 1, List.of(3), List.of(1, 2)));
 
         String[] actionOptions = {"Consultar", "Cadastrar"};
         int actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);

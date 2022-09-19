@@ -1,4 +1,5 @@
 package br.com.unipar.petvet.model;
+import java.util.List;
 
 public class Proprietario {
     private int id;
@@ -6,15 +7,11 @@ public class Proprietario {
     private String cpf;
     private String telefone;
     private String endereco;
-    private String email;
-    private String dataCadastro;
-    private String dataUltimaConsulta;
+    private List<Integer> idAnimais;
 
-    private int idAnimal;
-
-    public Proprietario(int id, int idAnimal, String nome, String cpf, String endereco, String telefone) {
+    public Proprietario(int id, String nome, String cpf, String endereco, String telefone, List<Integer> idAnimais) {
         this.id = id;
-        this.idAnimal = idAnimal;
+        this.idAnimais = idAnimais;
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
@@ -53,30 +50,6 @@ public class Proprietario {
         this.endereco = endereco;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(String dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
-    public String getDataUltimaConsulta() {
-        return dataUltimaConsulta;
-    }
-
-    public void setDataUltimaConsulta(String dataUltimaConsulta) {
-        this.dataUltimaConsulta = dataUltimaConsulta;
-    }
-
     public int getId() {
         return id;
     }
@@ -85,11 +58,19 @@ public class Proprietario {
         this.id = id;
     }
 
-    public int getIdAnimal() {
-        return idAnimal;
+    public List<Integer> getIdAnimais() {
+        return idAnimais;
     }
 
-    public void setIdAnimal(int idAnimal) {
-        this.idAnimal = idAnimal;
+    public void setIdAnimais(List<Integer> idAnimais) {
+        this.idAnimais = idAnimais;
+    }
+
+    public void addIdAnimal(int idAnimal) {
+        this.idAnimais.add(idAnimal);
+    }
+
+    public void removeIdAnimal(int idAnimal) {
+        this.idAnimais.remove(idAnimal);
     }
 }

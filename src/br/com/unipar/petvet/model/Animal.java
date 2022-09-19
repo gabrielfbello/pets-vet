@@ -1,8 +1,7 @@
 package br.com.unipar.petvet.model;
 
-import br.com.unipar.petvet.consts.RacaEnum;
-
 public class Animal {
+    private int id;
     private String nome;
 
     private String raca;
@@ -13,10 +12,14 @@ public class Animal {
 
     private int idade;
 
+    private int idProprietario;
+
     public Animal() {
     }
 
-    public Animal(int id, String nome, String raca, String especie, String sexo, int idade) {
+    public Animal(int id, String nome, String raca, String especie, String sexo, int idade, int idProprietario) {
+        this.id = id;
+        this.idProprietario = idProprietario;
         this.nome = nome;
         this.raca = raca;
         this.especie = especie;
@@ -60,12 +63,30 @@ public class Animal {
         this.idade = idade;
     }
 
+    public int getIdProprietario() {
+        return idProprietario;
+    }
+
+    public void setIdProprietario(int idProprietario) {
+        this.idProprietario = idProprietario;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "nome: " + nome + "\n" +
+        return  "id: " + id + "\n" +
+                "nome: " + nome + "\n" +
                 "raca: " + raca + "\n" +
                 "especie: " + especie + "\n" +
                 "sexo: " + sexo + "\n" +
-                "idade: " + idade + "\n";
+                "idade: " + idade + "\n" +
+                "idProprietario: " + idProprietario + "\n";
     }
 }

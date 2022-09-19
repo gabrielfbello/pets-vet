@@ -1,28 +1,30 @@
 package br.com.unipar.petvet.model;
+import java.util.List;
 
 public class Consulta {
     private int id;
     private String data;
     private String hora;
     private String motivo;
-    private String diagnostico;
-    private String tratamento;
     private double valor;
     private int idAnimal;
     private int idVeterinario;
+    private List<Integer> idExames;
+    private List<Integer> idMedicamentos;
 
-    public Consulta() {}
+    public Consulta() {
+    }
 
-    public Consulta(int id, String data, String hora, String motivo, String diagnostico, String tratamento, double valor, int idAnimal, int idVeterinario) {
+    public Consulta(int id, String data, String hora, String motivo, double valor, int idAnimal, int idVeterinario, List<Integer> idExames, List<Integer> idMedicamentos) {
         this.id = id;
         this.data = data;
         this.hora = hora;
         this.motivo = motivo;
-        this.diagnostico = diagnostico;
-        this.tratamento = tratamento;
         this.valor = valor;
         this.idAnimal = idAnimal;
         this.idVeterinario = idVeterinario;
+        this.idExames = idExames;
+        this.idMedicamentos = idMedicamentos;
     }
 
     public int getId() {
@@ -57,22 +59,6 @@ public class Consulta {
         this.motivo = motivo;
     }
 
-    public String getDiagnostico() {
-        return diagnostico;
-    }
-
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
-    }
-
-    public String getTratamento() {
-        return tratamento;
-    }
-
-    public void setTratamento(String tratamento) {
-        this.tratamento = tratamento;
-    }
-
     public double getValor() {
         return valor;
     }
@@ -95,5 +81,21 @@ public class Consulta {
 
     public void setIdVeterinario(int idVeterinario) {
         this.idVeterinario = idVeterinario;
+    }
+
+    public List<Integer> getIdExames() {
+        return idExames;
+    }
+
+    public void setIdExames(List<Integer> idExames) {
+        this.idExames = idExames;
+    }
+
+    public List<Integer> getIdMedicamentos() {
+        return idMedicamentos;
+    }
+
+    public void setIdMedicamentos(List<Integer> idMedicamentos) {
+        this.idMedicamentos = idMedicamentos;
     }
 }
