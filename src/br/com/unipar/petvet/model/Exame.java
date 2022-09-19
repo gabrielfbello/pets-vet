@@ -5,19 +5,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Exame {
     private int id;
     private String name;
+    private double valor;
     private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Exame(String name) {
+    public Exame(String name, double valor) {
         this.id = count.incrementAndGet();
         this.name = name;
+        this.valor = valor;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public double getValor() {
+        return valor;
     }
 
     public String getNome() {

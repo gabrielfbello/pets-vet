@@ -51,18 +51,18 @@ public class Main {
         vacinas.add(new Vacina( "V12"));
 
 //        Amostragem de Medicamentos
-        medicamentos.add(new Medicamento( "Dipirona"));
-        medicamentos.add(new Medicamento( "Dorflex"));
-        medicamentos.add(new Medicamento( "Buscopan"));
-        medicamentos.add(new Medicamento( "Rivotril"));
-        medicamentos.add(new Medicamento( "Neosaldina"));
+        medicamentos.add(new Medicamento( "Dipirona", 30.00));
+        medicamentos.add(new Medicamento( "Dorflex", 50.00));
+        medicamentos.add(new Medicamento( "Buscopan", 20.00));
+        medicamentos.add(new Medicamento( "Rivotril", 40.00));
+        medicamentos.add(new Medicamento( "Neosaldina", 30.00));
 
 //        Amostragem de Exames
-        exames.add(new Exame("Raio-X"));
-        exames.add(new Exame("Ultrassom"));
-        exames.add(new Exame("Endoscopia"));
-        exames.add(new Exame( "Eletrocardiograma"));
-        exames.add(new Exame("Eletroencefalograma"));
+        exames.add(new Exame("Raio-X", 200.00));
+        exames.add(new Exame("Ultrassom", 300.00));
+        exames.add(new Exame("Endoscopia", 100.00));
+        exames.add(new Exame( "Eletrocardiograma", 150.00));
+        exames.add(new Exame("Eletroencefalograma", 200.00));
 
 //        Amostragem de Consultas
         consultas.add(new Consulta("12/08/2021", "12:00", "Exame de Rotina", 65.00, 1, 2, List.of(1, 2), List.of(3)));
@@ -185,7 +185,9 @@ public class Main {
                 }
 
                 actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
-                chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+                if(actionOption != 3) {
+                    chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+                }
             } else if (actionOption == 1) {
                 switch (chosenClass) {
                     case 0:
@@ -203,11 +205,13 @@ public class Main {
                         break;
                     case 2:
                         String nomeExame = JOptionPane.showInputDialog("Digite o nome do exame: ");
-                        exames.add(new Exame(nomeExame));
+                        double valorExame = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do exame: "));
+                        exames.add(new Exame(nomeExame, valorExame));
                         break;
                     case 3:
                         String nomeMedicamento = JOptionPane.showInputDialog("Digite o nome do medicamento: ");
-                        medicamentos.add(new Medicamento(nomeMedicamento));
+                        double valorMedicamento = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do medicamento: "));
+                        medicamentos.add(new Medicamento(nomeMedicamento, valorMedicamento));
                         break;
                     case 4:
                         String nomeVeterinario = JOptionPane.showInputDialog("Digite o nome do veterinário: ");
@@ -230,6 +234,45 @@ public class Main {
                         }
 
                         proprietarios.add(new Proprietario(nomeProprietario, cpfProprietario, enderecoProprietario, telefoneProprietario, animaisProprietarioList));
+                        break;
+                    case 6:
+
+                        String dataConsulta = JOptionPane.showInputDialog("Digite a data da consulta: ");
+                        String motivoConsulta = JOptionPane.showInputDialog("Digite o motivo da consulta: ");
+                        String horaConsulta = JOptionPane.showInputDialog("Digite a hora da consulta: ");
+                        double valorConsulta = 0;
+                        int idVeterinarioConsulta = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do veterinário da consulta: "));
+                        int idAnimalConsulta = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do animal da consulta: "));
+                        String examesConsulta = JOptionPane.showInputDialog("Digite os IDs dos exames da consulta (Ex: 1,2,3): ");
+                        String medicamentosConsulta = JOptionPane.showInputDialog("Digite os IDs dos medicamentos da consulta (Ex: 1,2,3): ");
+
+
+
+                        List<Integer> examesConsultaList = new ArrayList<>();
+                        for (String exameConsulta : examesConsulta.split(",")) {
+                            examesConsultaList.add(Integer.parseInt(exameConsulta));
+
+                            for (Exame exame : exames) {
+                                if (exame.getId() == Integer.parseInt(exameConsulta)) {
+                                    valorConsulta += exame.getValor();
+                                }
+                            }
+                        }
+
+                        List<Integer> medicamentosConsultaList = new ArrayList<>();
+                        for (String medicamentoConsulta : medicamentosConsulta.split(",")) {
+                            medicamentosConsultaList.add(Integer.parseInt(medicamentoConsulta));
+
+                            for (Medicamento medicamento : medicamentos) {
+                                if (medicamento.getId() == Integer.parseInt(medicamentoConsulta)) {
+                                    valorConsulta += medicamento.getValor();
+                                }
+                            }
+                        }
+
+
+
+                        consultas.add(new Consulta(dataConsulta, horaConsulta, motivoConsulta, valorConsulta, idAnimalConsulta, idVeterinarioConsulta, examesConsultaList, medicamentosConsultaList));
                         break;
                 }
 

@@ -5,27 +5,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Medicamento {
     private int id;
     private String name;
+    private double valor;
     private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Medicamento(String name) {
+    public Medicamento(String name, double valor) {
         this.id = count.incrementAndGet();
         this.name = name;
+        this.valor = valor;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public double getValor() {
+        return valor;
     }
 
     @Override
