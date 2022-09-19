@@ -1,4 +1,3 @@
-import br.com.unipar.petvet.consts.RacaEnum;
 import br.com.unipar.petvet.model.*;
 
 import javax.swing.*;
@@ -7,74 +6,69 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        Crie um array para cada classe de modelo
         List<Animal> animais = new ArrayList<>();
+        List<BanhoTosa> banhosTosa = new ArrayList<>();
+        List<String> medicamentos = new ArrayList<>();
+        List<Consulta> consultas = new ArrayList<>();
+        List<Exame> exames = new ArrayList<>();
+        List<Proprietario> proprietarios = new ArrayList<>();
+        List<Tosa> tosas = new ArrayList<>();
+        List<Veterinario> veterinarios = new ArrayList<>();
+        List<Vacina> vacinas = new ArrayList<>();
+
+//        Amostragem de Proprietários
+        proprietarios.add(new Proprietario(1, 1, "João", "123.456.789-00", "Rua 1", "1234-5678"));
+        proprietarios.add(new Proprietario(2, 2, "Maria", "987.654.321-00", "Rua das Flores", "8765-4321"));
+        proprietarios.add(new Proprietario(3, 3, "José", "123.456.789-00", "Avenida Brasil", "1234-5678"));
+        proprietarios.add(new Proprietario(4, 4, "Ana", "987.654.321-00", "Rua 2", "8765-4321"));
+        proprietarios.add(new Proprietario(5, 5, "Pedro", "123.456.789-00", "Rua Rio Grande do Sul", "1234-5678"));
+        proprietarios.add(new Proprietario(6, 6, "Paula", "987.654.321-00", "Rua 3", "8765-4321"));
+        proprietarios.add(new Proprietario(7, 7, "Carlos", "123.456.789-00", "Rua Nove de Julho", "1234-5678"));
+        proprietarios.add(new Proprietario(8, 8, "Julia", "987.654.321-00", "Rua São Paulo", "8765-4321"));
+        proprietarios.add(new Proprietario(9, 9, "Marcos", "123.456.789-00", "Rua Tocantins", "1234-5678"));
+        proprietarios.add(new Proprietario(10, 10, "Carla", "987.654.321-00", "Rua 4", "8765-4321"));
+
+//      Amostragem de Animais
+        animais.add(new Animal(1, "Rex", "Pastor Alemão", "Cachorro", "Macho", 2));
+        animais.add(new Animal(2, "Luna", "Vira-lata", "Cachorro", "Fêmea", 1));
+        animais.add(new Animal(3, "Miau", "Vira-lata", "Gato", "Fêmea", 1));
+        animais.add(new Animal(4, "Bolinha", "Ragdoll", "Gato", "Macho", 2));
+        animais.add(new Animal(5, "Pé de Pano", "Vira-lata", "Cachorro", "Macho", 1));
+        animais.add(new Animal(6, "Malvo", "Bulldog", "Cachorro", "Macho", 1));
+        animais.add(new Animal(7, "Pogger", "Pincher", "Cachorro", "Macho", 1));
+        animais.add(new Animal(8, "Zeca", "Poodle", "Cachorro", "Macho", 1));
+        animais.add(new Animal(9, "Espeto", "Pitbull", "Cachorro", "Macho", 1));
+        animais.add(new Animal(10, "Bobby", "Pitbull", "Cachorro", "Macho", 1));
+
+//      Amostragem de Veterinários
+        veterinarios.add(new Veterinario(1, "João", "123.456.789-00", "Rua 1", "1234-5678", "1234", "12/12/2012", "13/08/22"));
+        veterinarios.add(new Veterinario(2, "Maria", "987.654.321-00", "Rua das Flores", "8765-4321", "1234", "12/12/2012", "13/08/22"));
+        veterinarios.add(new Veterinario(3, "José", "123.456.789-00", "Avenida Brasil", "1234-5678", "1234", "12/12/2012", "13/08/22"));
+        veterinarios.add(new Veterinario(4, "Ana", "987.654.321-00", "Rua 2", "8765-4321", "1234", "12/12/2012", "13/08/22"));
+
+//        Amostragem de Vacinas
+        vacinas.add(new Vacina(1, "V8"));
+        vacinas.add(new Vacina(2, "V10"));
+
+//        Amostragem de Medicamentos
+        medicamentos.add(1, "Dorflex");
+        medicamentos.add(2, "Dipirona");
+        medicamentos.add(3, "Ibuprofeno");
+        medicamentos.add(4, "Paracetamol");
+        medicamentos.add(5, "Amoxicilina");
+
+//        Amostragem de Exames
+        exames.add(new Exame(1, "Raio-X"));
+        exames.add(new Exame(2, "Ultrassom"));
+        exames.add(new Exame(3, "Endoscopia"));
+        exames.add(new Exame(4, "Eletrocardiograma"));
+        exames.add(new Exame(5, "Eletroencefalograma"));
+
 
         String[] actionOptions = {"Consultar", "Cadastrar"};
         int actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
 
         String[] classOptions = {"Animais", "Vacinas", "Exames", "Medicamentos", "Tosadores", "Clientes"};
         int chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
-
-        if (actionOption == 1) {
-            switch (chosenClass) {
-                case 0:
-                    Animal animal = new Animal();
-                    animal.setNome(JOptionPane.showInputDialog("Nome do animal: "));
-                    animal.setRaca(JOptionPane.showInputDialog("Raça do animal: "));
-                    animal.setEspecie(JOptionPane.showInputDialog("Espécie do animal: "));
-                    animal.setSexo(JOptionPane.showInputDialog("Sexo do animal: "));
-                    animal.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Idade do animal: ")));
-                    JOptionPane.showMessageDialog(null, animal.toString());
-                 animais.add(animal);
-                    break;
-//                case 1:
-//                    Vacina vacina = new Vacina();
-//                    vacina.setNome(JOptionPane.showInputDialog("Nome da vacina: "));
-//                    vacina.setDescricao(JOptionPane.showInputDialog("Descrição da vacina: "));
-//                    vacina.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço da vacina: ")));
-//                    JOptionPane.showMessageDialog(null, vacina.toString());
-//                    break;
-//                case 2:
-//                    Exame exame = new Exame();
-//                    exame.setNome(JOptionPane.showInputDialog("Nome do exame: "));
-//                    exame.setDescricao(JOptionPane.showInputDialog("Descrição do exame: "));
-//                    exame.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço do exame: ")));
-//                    JOptionPane.showMessageDialog(null, exame.toString());
-//                    break;
-//                case 3:
-//                    Medicamento medicamento = new Medicamento();
-//                    medicamento.setNome(JOptionPane.showInputDialog("Nome do medicamento: "));
-//                    medicamento.setDescricao(JOptionPane.showInputDialog("Descrição do medicamento: "));
-//                    medicamento.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço do medicamento: ")));
-//                    JOptionPane.showMessageDialog(null, medicamento.toString());
-//                    break;
-//                case 4:
-//                    Tosador tosador = new Tosador();
-//                    tosador.setNome(JOptionPane.showInputDialog("Nome do tosador: "));
-//                    tosador.setCpf(JOptionPane.showInputDialog("CPF do tosador: "));
-//                    tosador.setTelefone(JOptionPane.showInputDialog("Telefone do tosador: "));
-//                    tosador.setEndereco(JOptionPane.showInputDialog("Endereço do tosador: "));
-//                    tosador.setCidade(JOptionPane.showInputDialog("Cidade do tosador: "));
-//                    tosador.setEstado(JOptionPane.showInputDialog("Estado do tosador: "));
-//                    tosador.setCep(JOptionPane.showInputDialog("CEP do tosador: "));
-//                    JOptionPane.showMessageDialog(null, tosador.toString());
-//                    break;
-//                case 5:
-//                    Cliente cliente = new Cliente();
-//                    cliente.setNome(JOptionPane.showInputDialog("Nome do cliente: "));
-//                    cliente.setCpf(JOptionPane.showInputDialog("CPF do cliente: "));
-//                    cliente.setTelefone(JOptionPane.showInputDialog("Telefone do cliente: "));
-//                    cliente.setEndereco(JOptionPane.showInputDialog("Endereço do cliente: "));
-//                    cliente.setCidade(JOptionPane.showInputDialog("Cidade do cliente: "));
-//                    cliente.setEstado(JOptionPane.showInputDialog("Estado do cliente: "));
-//                    cliente.setCep(JOptionPane.showInputDialog("CEP do cliente: "));
-//                    JOptionPane.showMessageDialog(null, cliente.toString());
-//                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida");
-                    break;
-            }
-        }
     }
 }

@@ -4,17 +4,9 @@ public class Vacina {
     private int id;
     private String name;
     private String medicationSchedule;
-
-    private String data;
-
-    private String hora;
-
-    public Vacina(int id, String name, String medicationSchedule, String data, String hora) {
+    public Vacina(int id, String name) {
         this.id = id;
         this.name = name;
-        this.medicationSchedule = medicationSchedule;
-        this.data = data;
-        this.hora = hora;
     }
 
     public int getId() {
@@ -39,22 +31,6 @@ public class Vacina {
 
     public void setMedicationSchedule(String medicationSchedule) {
         this.medicationSchedule = medicationSchedule;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
     }
 
     @Override

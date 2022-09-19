@@ -32,10 +32,6 @@ public class Animal {
         this.nome = nome;
     }
 
-//    public RacaEnum getRaca() {
-//        return raca;
-//    }
-
     public void setRaca(String raca) {
         this.raca = raca;
     }
@@ -63,7 +59,6 @@ public class Animal {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-
 
     @Override
     public String toString() {

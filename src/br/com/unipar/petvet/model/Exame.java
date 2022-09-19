@@ -3,12 +3,10 @@ package br.com.unipar.petvet.model;
 public class Exame {
     private int id;
     private String name;
-    private String medicationSchedule;
 
-    public Exame(int id, String name, String medicationSchedule) {
+    public Exame(int id, String name) {
         this.id = id;
         this.name = name;
-        this.medicationSchedule = medicationSchedule;
     }
 
     public int getId() {
@@ -27,18 +25,9 @@ public class Exame {
         this.name = name;
     }
 
-    public String getMedicationSchedule() {
-        return medicationSchedule;
-    }
-
-    public void setMedicationSchedule(String medicationSchedule) {
-        this.medicationSchedule = medicationSchedule;
-    }
-
     @Override
     public String toString() {
         return "id: " + id + "\n" +
-                "name: " + name + "\n" +
-                "medicationSchedule: " + medicationSchedule + "\n";
+                "name: " + name + "\n";
     }
 }

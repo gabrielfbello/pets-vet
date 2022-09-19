@@ -1,6 +1,7 @@
 package br.com.unipar.petvet.model;
 
 public class Veterinario {
+    private int id;
     private String nome;
     private String crmv;
     private String telefone;
@@ -8,6 +9,17 @@ public class Veterinario {
     private String email;
     private String dataCadastro;
     private String dataUltimaConsulta;
+
+    public Veterinario(int id, String nome, String crmv, String endereco, String telefone, String email, String dataCadastro, String dataUltimaConsulta) {
+        this.id = id;
+        this.nome = nome;
+        this.crmv = crmv;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.email = email;
+        this.dataCadastro = dataCadastro;
+        this.dataUltimaConsulta = dataUltimaConsulta;
+    }
 
     public String getNome() {
         return nome;
@@ -63,5 +75,13 @@ public class Veterinario {
 
     public void setDataUltimaConsulta(String dataUltimaConsulta) {
         this.dataUltimaConsulta = dataUltimaConsulta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

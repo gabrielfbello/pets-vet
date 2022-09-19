@@ -1,6 +1,7 @@
 package br.com.unipar.petvet.model;
 
 public class Proprietario {
+    private int id;
     private String nome;
     private String cpf;
     private String telefone;
@@ -8,6 +9,17 @@ public class Proprietario {
     private String email;
     private String dataCadastro;
     private String dataUltimaConsulta;
+
+    private int idAnimal;
+
+    public Proprietario(int id, int idAnimal, String nome, String cpf, String endereco, String telefone) {
+        this.id = id;
+        this.idAnimal = idAnimal;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
@@ -63,5 +75,21 @@ public class Proprietario {
 
     public void setDataUltimaConsulta(String dataUltimaConsulta) {
         this.dataUltimaConsulta = dataUltimaConsulta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getIdAnimal() {
+        return idAnimal;
+    }
+
+    public void setIdAnimal(int idAnimal) {
+        this.idAnimal = idAnimal;
     }
 }
