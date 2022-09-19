@@ -1,5 +1,6 @@
 package br.com.unipar.petvet.model;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Proprietario {
     private int id;
@@ -8,9 +9,9 @@ public class Proprietario {
     private String telefone;
     private String endereco;
     private List<Integer> idAnimais;
-
-    public Proprietario(int id, String nome, String cpf, String endereco, String telefone, List<Integer> idAnimais) {
-        this.id = id;
+    private static final AtomicInteger count = new AtomicInteger(0);
+    public Proprietario(String nome, String cpf, String endereco, String telefone, List<Integer> idAnimais) {
+        this.id = count.incrementAndGet();
         this.idAnimais = idAnimais;
         this.nome = nome;
         this.cpf = cpf;

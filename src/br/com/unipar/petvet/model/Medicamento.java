@@ -1,11 +1,14 @@
 package br.com.unipar.petvet.model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Medicamento {
     private int id;
     private String name;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Medicamento(int id, String name) {
-        this.id = id;
+    public Medicamento(String name) {
+        this.id = count.incrementAndGet();
         this.name = name;
     }
 

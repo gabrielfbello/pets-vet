@@ -1,12 +1,15 @@
 package br.com.unipar.petvet.model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Banho {
     private int banhoId;
     private String banhoData;
     private String banhoHora;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
     public Banho(int banhoId, String banhoData, String banhoHora) {
-        this.banhoId = banhoId;
+        this.banhoId = count.incrementAndGet();
         this.banhoData = banhoData;
         this.banhoHora = banhoHora;
     }

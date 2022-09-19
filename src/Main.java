@@ -17,59 +17,59 @@ public class Main {
         List<Consulta> consultas = new ArrayList<>();
 
 //        Amostragem de Proprietários
-        proprietarios.add(new Proprietario(1, "João", "123.456.789-00", "Rua 1", "123456789", List.of(2, 7)));
-        proprietarios.add(new Proprietario(2, "Maria", "987.654.321-00", "Rua 2", "987654321", List.of(1)));
-        proprietarios.add(new Proprietario(3, "José", "123.987.456-00", "Rua 3", "123987456", List.of(3)));
-        proprietarios.add(new Proprietario(4, "Ana", "456.789.123-00", "Rua 4", "456789123", List.of(4)));
-        proprietarios.add(new Proprietario(5, "Pedro", "789.123.456-00", "Rua 5", "789123456", List.of(5)));
-        proprietarios.add(new Proprietario(6, "Paulo", "321.654.987-00", "Rua 6", "321654987", List.of(6)));
-        proprietarios.add(new Proprietario(7, "Carla", "654.321.987-00", "Rua 7", "654321987", List.of(8)));
-        proprietarios.add(new Proprietario(8, "Marcos", "987.321.654-00", "Rua 8", "987321654", List.of(9)));
-        proprietarios.add(new Proprietario(9, "Julia", "654.987.321-00", "Rua 9", "654987321", List.of(10)));
+        proprietarios.add(new Proprietario( "João", "123.456.789-00", "Rua 1", "123456789", List.of(2, 7)));
+        proprietarios.add(new Proprietario( "Maria", "987.654.321-00", "Rua 2", "987654321", List.of(1)));
+        proprietarios.add(new Proprietario( "José", "123.987.456-00", "Rua 3", "123987456", List.of(3)));
+        proprietarios.add(new Proprietario( "Ana", "456.789.123-00", "Rua 4", "456789123", List.of(4)));
+        proprietarios.add(new Proprietario( "Pedro", "789.123.456-00", "Rua 5", "789123456", List.of(5)));
+        proprietarios.add(new Proprietario( "Paulo", "321.654.987-00", "Rua 6", "321654987", List.of(6)));
+        proprietarios.add(new Proprietario( "Carla", "654.321.987-00", "Rua 7", "654321987", List.of(8)));
+        proprietarios.add(new Proprietario( "Marcos", "987.321.654-00", "Rua 8", "987321654", List.of(9)));
+        proprietarios.add(new Proprietario( "Julia", "654.987.321-00", "Rua 9", "654987321", List.of(10)));
 
 //      Amostragem de Animais
-        animais.add(new Animal(1, "Rex", "Pastor Alemão", "Cachorro", "Macho", 2, 1));
-        animais.add(new Animal(2, "Luna", "Vira-lata", "Cachorro", "Fêmea", 1, 2));
-        animais.add(new Animal(3, "Miau", "Vira-lata", "Gato", "Fêmea", 1, 3));
-        animais.add(new Animal(4, "Bolinha", "Ragdoll", "Gato", "Macho", 2, 4));
-        animais.add(new Animal(5, "Pé de Pano", "Vira-lata", "Cachorro", "Macho", 1, 5));
-        animais.add(new Animal(6, "Malvo", "Bulldog", "Cachorro", "Macho", 2, 6));
-        animais.add(new Animal(7, "Pogger", "Pincher", "Cachorro", "Macho", 1, 1));
-        animais.add(new Animal(8, "Zeca", "Poodle", "Cachorro", "Macho", 1, 7));
-        animais.add(new Animal(9, "Espeto", "Pitbull", "Cachorro", "Macho", 1, 8));
-        animais.add(new Animal(10, "Bobby", "Pitbull", "Cachorro", "Macho", 1, 9));
+        animais.add(new Animal("Rex", "Pastor Alemão", "Cachorro", "Macho", 2, 1));
+        animais.add(new Animal("Luna", "Vira-lata", "Cachorro", "Fêmea", 1, 2));
+        animais.add(new Animal("Miau", "Vira-lata", "Gato", "Fêmea", 1, 3));
+        animais.add(new Animal("Bolinha", "Ragdoll", "Gato", "Macho", 2, 4));
+        animais.add(new Animal("Pé de Pano", "Vira-lata", "Cachorro", "Macho", 1, 5));
+        animais.add(new Animal("Malvo", "Bulldog", "Cachorro", "Macho", 2, 6));
+        animais.add(new Animal("Pogger", "Pincher", "Cachorro", "Macho", 1, 1));
+        animais.add(new Animal("Zeca", "Poodle", "Cachorro", "Macho", 1, 7));
+        animais.add(new Animal("Espeto", "Pitbull", "Cachorro", "Macho", 1, 8));
+        animais.add(new Animal("Bobby", "Pitbull", "Cachorro", "Macho", 1, 9));
 
 //      Amostragem de Veterinários
-        veterinarios.add(new Veterinario(1, "João", "123.456.789-00", "Rua 1", "1234-5678", "12/12/2012"));
-        veterinarios.add(new Veterinario(2, "Maria", "987.654.321-00", "Rua das Flores", "8765-4321", "12/12/2012"));
-        veterinarios.add(new Veterinario(3, "José", "123.456.789-00", "Avenida Brasil", "1234-5678", "12/12/2012"));
-        veterinarios.add(new Veterinario(4, "Ana", "987.654.321-00", "Rua 2", "8765-4321", "12/12/2012"));
+        veterinarios.add(new Veterinario( "João", "123.456.789-00", "Rua 1", "1234-5678", "12/12/2012"));
+        veterinarios.add(new Veterinario( "Maria", "987.654.321-00", "Rua das Flores", "8765-4321", "12/12/2012"));
+        veterinarios.add(new Veterinario( "José", "123.456.789-00", "Avenida Brasil", "1234-5678", "12/12/2012"));
+        veterinarios.add(new Veterinario( "Ana", "987.654.321-00", "Rua 2", "8765-4321", "12/12/2012"));
 
 //        Amostragem de Vacinas
-        vacinas.add(new Vacina(1, "V8"));
-        vacinas.add(new Vacina(2, "V10"));
-        vacinas.add(new Vacina(3, "V12"));
+        vacinas.add(new Vacina( "V8"));
+        vacinas.add(new Vacina( "V10"));
+        vacinas.add(new Vacina( "V12"));
 
 //        Amostragem de Medicamentos
-        medicamentos.add(new Medicamento(1, "Dipirona"));
-        medicamentos.add(new Medicamento(2, "Dorflex"));
-        medicamentos.add(new Medicamento(3, "Buscopan"));
-        medicamentos.add(new Medicamento(4, "Rivotril"));
-        medicamentos.add(new Medicamento(5, "Neosaldina"));
+        medicamentos.add(new Medicamento( "Dipirona"));
+        medicamentos.add(new Medicamento( "Dorflex"));
+        medicamentos.add(new Medicamento( "Buscopan"));
+        medicamentos.add(new Medicamento( "Rivotril"));
+        medicamentos.add(new Medicamento( "Neosaldina"));
 
 //        Amostragem de Exames
-        exames.add(new Exame(1, "Raio-X"));
-        exames.add(new Exame(2, "Ultrassom"));
-        exames.add(new Exame(3, "Endoscopia"));
-        exames.add(new Exame(4, "Eletrocardiograma"));
-        exames.add(new Exame(5, "Eletroencefalograma"));
+        exames.add(new Exame("Raio-X"));
+        exames.add(new Exame("Ultrassom"));
+        exames.add(new Exame("Endoscopia"));
+        exames.add(new Exame( "Eletrocardiograma"));
+        exames.add(new Exame("Eletroencefalograma"));
 
 //        Amostragem de Consultas
-        consultas.add(new Consulta(1, "12/08/2021", "12:00", "Exame de Rotina", 65.00, 1, 2, List.of(1, 2), List.of(3)));
-        consultas.add(new Consulta(2, "12/08/2021", "13:00", "Pulgas e Carrapatos", 80.00, 2, 1, List.of(1), List.of(1, 2)));
-        consultas.add(new Consulta(3, "12/08/2021", "14:00", "Exame de Rotina", 65.00, 3, 1, List.of(1, 2), List.of(3)));
-        consultas.add(new Consulta(4, "12/08/2021", "15:00", "Castração", 150.00, 4, 1, List.of(1, 2), List.of(3)));
-        consultas.add(new Consulta(5, "12/08/2021", "16:00", "Raiva", 100.00, 5, 1, List.of(3), List.of(1, 2)));
+        consultas.add(new Consulta("12/08/2021", "12:00", "Exame de Rotina", 65.00, 1, 2, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta("12/08/2021", "13:00", "Pulgas e Carrapatos", 80.00, 2, 1, List.of(1), List.of(1, 2)));
+        consultas.add(new Consulta("12/08/2021", "14:00", "Exame de Rotina", 65.00, 3, 1, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta("12/08/2021", "15:00", "Castração", 150.00, 4, 1, List.of(1, 2), List.of(3)));
+        consultas.add(new Consulta("12/08/2021", "16:00", "Raiva", 100.00, 5, 1, List.of(3), List.of(1, 2)));
 
         String[] actionOptions = {"Consultar", "Cadastrar", "Listar", "Sair"};
         int actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
@@ -189,41 +189,35 @@ public class Main {
             } else if (actionOption == 1) {
                 switch (chosenClass) {
                     case 0:
-                        int idAnimal = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do animal: "));
                         String nomeAnimal = JOptionPane.showInputDialog("Digite o nome do animal: ");
                         String racaAnimal = JOptionPane.showInputDialog("Digite a raça do animal: ");
                         String especieAnimal = JOptionPane.showInputDialog("Digite a espécie do animal: ");
                         String sexoAnimal = JOptionPane.showInputDialog("Digite o sexo do animal: ");
                         int idadeAnimal = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do animal: "));
                         int idProprietarioAnimal = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do proprietário do animal: "));
-                        animais.add(new Animal(idAnimal, nomeAnimal, racaAnimal, especieAnimal, sexoAnimal, idadeAnimal, idProprietarioAnimal));
+                        animais.add(new Animal(nomeAnimal, racaAnimal, especieAnimal, sexoAnimal, idadeAnimal, idProprietarioAnimal));
                         break;
                     case 1:
-                        int idVacina = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID da vacina: "));
                         String nomeVacina = JOptionPane.showInputDialog("Digite o nome da vacina: ");
-                        vacinas.add(new Vacina(idVacina, nomeVacina));
+                        vacinas.add(new Vacina(nomeVacina));
                         break;
                     case 2:
-                        int idExame = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do exame: "));
                         String nomeExame = JOptionPane.showInputDialog("Digite o nome do exame: ");
-                        exames.add(new Exame(idExame, nomeExame));
+                        exames.add(new Exame(nomeExame));
                         break;
                     case 3:
-                        int idMedicamento = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do medicamento: "));
                         String nomeMedicamento = JOptionPane.showInputDialog("Digite o nome do medicamento: ");
-                        medicamentos.add(new Medicamento(idMedicamento, nomeMedicamento));
+                        medicamentos.add(new Medicamento(nomeMedicamento));
                         break;
                     case 4:
-                        int idVeterinario = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do veterinário: "));
                         String nomeVeterinario = JOptionPane.showInputDialog("Digite o nome do veterinário: ");
                         String enderecoVeterinario = JOptionPane.showInputDialog("Digite o endereço do veterinário: ");
                         String telefoneVeterinario = JOptionPane.showInputDialog("Digite o telefone do veterinário: ");
                         String crmvVeterinario = JOptionPane.showInputDialog("Digite o CRMV do veterinário: ");
                         String dataCadastroVeterinario = JOptionPane.showInputDialog("Digite a data de cadastro do veterinário: ");
-                        veterinarios.add(new Veterinario(idVeterinario, nomeVeterinario, crmvVeterinario, enderecoVeterinario, telefoneVeterinario, dataCadastroVeterinario));
+                        veterinarios.add(new Veterinario(nomeVeterinario, crmvVeterinario, enderecoVeterinario, telefoneVeterinario, dataCadastroVeterinario));
                         break;
                     case 5:
-                        int idProprietario = Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do proprietário: "));
                         String nomeProprietario = JOptionPane.showInputDialog("Digite o nome do proprietário: ");
                         String enderecoProprietario = JOptionPane.showInputDialog("Digite o endereço do proprietário: ");
                         String telefoneProprietario = JOptionPane.showInputDialog("Digite o telefone do proprietário: ");
@@ -235,12 +229,14 @@ public class Main {
                             animaisProprietarioList.add(Integer.parseInt(animal));
                         }
 
-                        proprietarios.add(new Proprietario(idProprietario, nomeProprietario, cpfProprietario, enderecoProprietario, telefoneProprietario, animaisProprietarioList));
+                        proprietarios.add(new Proprietario(nomeProprietario, cpfProprietario, enderecoProprietario, telefoneProprietario, animaisProprietarioList));
                         break;
                 }
 
                 actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
-                chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+                if(actionOption != 3) {
+                    chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+                }
             } else if (actionOption == 2) {
                 switch (chosenClass) {
                     case 0:
@@ -294,8 +290,9 @@ public class Main {
                 }
 
                 actionOption = JOptionPane.showOptionDialog(null, "O que deseja fazer?", "PetVet", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, actionOptions, actionOptions[0]);
-                chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
-            } else if (actionOption == 2) {
+                if(actionOption != 3) {
+                    chosenClass = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, classOptions, classOptions[0]);
+                }
             }
         } while (actionOption != 3);
     }

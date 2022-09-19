@@ -1,16 +1,18 @@
 package br.com.unipar.petvet.model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Veterinario {
     private int id;
     private String nome;
     private String crmv;
     private String telefone;
     private String endereco;
-    private String email;
     private String dataCadastro;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Veterinario(int id, String nome, String crmv, String endereco, String telefone, String dataCadastro) {
-        this.id = id;
+    public Veterinario(String nome, String crmv, String endereco, String telefone, String dataCadastro) {
+        this.id = count.incrementAndGet();
         this.nome = nome;
         this.crmv = crmv;
         this.endereco = endereco;

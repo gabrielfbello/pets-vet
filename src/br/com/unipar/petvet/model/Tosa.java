@@ -1,10 +1,15 @@
-package br.com.unipar.petvet.model;public class Tosa {
+package br.com.unipar.petvet.model;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class Tosa {
     private int id;
     private String name;
     private String medicationSchedule;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Tosa(int id, String name, String medicationSchedule) {
-        this.id = id;
+    public Tosa(String name, String medicationSchedule) {
+        this.id = count.incrementAndGet();
         this.name = name;
         this.medicationSchedule = medicationSchedule;
     }

@@ -1,5 +1,7 @@
 package br.com.unipar.petvet.model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Animal {
     private int id;
     private String nome;
@@ -14,11 +16,13 @@ public class Animal {
 
     private int idProprietario;
 
+    private static final AtomicInteger count = new AtomicInteger(0);
+
     public Animal() {
     }
 
-    public Animal(int id, String nome, String raca, String especie, String sexo, int idade, int idProprietario) {
-        this.id = id;
+    public Animal(String nome, String raca, String especie, String sexo, int idade, int idProprietario) {
+        this.id = count.incrementAndGet();
         this.idProprietario = idProprietario;
         this.nome = nome;
         this.raca = raca;

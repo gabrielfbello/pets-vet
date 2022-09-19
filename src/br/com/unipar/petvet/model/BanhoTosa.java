@@ -1,12 +1,15 @@
 package br.com.unipar.petvet.model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class BanhoTosa extends Animal {
     private int id;
     private String data;
     private String hora;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
     public BanhoTosa(int id, String data, String hora) {
-        this.id = id;
+        this.id = count.incrementAndGet();
         this.data = data;
         this.hora = hora;
     }
