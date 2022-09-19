@@ -8,17 +8,14 @@ public class Veterinario {
     private String endereco;
     private String email;
     private String dataCadastro;
-    private String dataUltimaConsulta;
 
-    public Veterinario(int id, String nome, String crmv, String endereco, String telefone, String email, String dataCadastro, String dataUltimaConsulta) {
+    public Veterinario(int id, String nome, String crmv, String endereco, String telefone, String dataCadastro) {
         this.id = id;
         this.nome = nome;
         this.crmv = crmv;
         this.endereco = endereco;
         this.telefone = telefone;
-        this.email = email;
         this.dataCadastro = dataCadastro;
-        this.dataUltimaConsulta = dataUltimaConsulta;
     }
 
     public String getNome() {
@@ -53,28 +50,12 @@ public class Veterinario {
         this.endereco = endereco;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getDataCadastro() {
         return dataCadastro;
     }
 
     public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
-    }
-
-    public String getDataUltimaConsulta() {
-        return dataUltimaConsulta;
-    }
-
-    public void setDataUltimaConsulta(String dataUltimaConsulta) {
-        this.dataUltimaConsulta = dataUltimaConsulta;
     }
 
     public int getId() {
